@@ -15,7 +15,8 @@ public class Run extends Task {
 
     @Override
     public void execute() {
-        if (!ctx.movement.running() || ctx.movement.energyLevel() > 50);
-            else (ctx.movement.running();
+        if (!ctx.movement.running() && ctx.movement.energyLevel() > 50){ // asking if you're not running and you have 51%+ energy, if so it will activate the next line.
+            ctx.movement.running(true); // this will turn on run if not turned on already.
+        } // this closes the if statement.
 
     }}

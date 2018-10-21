@@ -10,6 +10,7 @@ import java.util.List;
 
 import scripts.Tasks.Bank;
 import scripts.Tasks.Pick;
+import scripts.Tasks.Run;
 import scripts.Tasks.Walk;
 
 @Script.Manifest(name="hide", description = "Pickup Hide", properties = "author=Jordan; topic=999 client=4")
@@ -23,7 +24,7 @@ public class Hide extends PollingScript<ClientContext> {
     @Override
     public void start() {
 
-
+        taskList.add(new Run(ctx));
         taskList.add(new Bank(ctx));
         taskList.add(new Walk(ctx));
         taskList.add(new Pick(ctx));
